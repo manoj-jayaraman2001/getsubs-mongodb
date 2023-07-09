@@ -11,6 +11,11 @@ const port =  process.env.PORT || 3000
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 
+//presenting static files
+app.use(express.static('public'))
+
+
+
 // Connect to DATABASE
 const DATABASE_URL = process.env.DATABASE_URL;
 console.log(DATABASE_URL)

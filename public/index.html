@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./public.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Lato&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Get YouTube Subs</title>
+  </head>
+  <body>
+    <h1>Subscriber API Schema Docs</h1>
+
+    <h2>Base URL</h2>
+    <code>
+      <p>https://api.example.com</p>
+      <i class="fa-solid fa-copy" onclick="copy()"></i>
+    </code>
+
+    <h2>Error Responses</h2>
+    <ul>
+      <li>
+        <code>500 Internal Server Error</code>: Returned in case of any
+        server-side error, including database or other internal errors.
+      </li>
+    </ul>
+
+    <h2>Get all subscribers</h2>
+    <h3>Request</h3>
+    <ul>
+      <li>Method: <code>GET</code></li>
+      <li>
+        URL:
+        <code>
+          <p>https://api.example.com/subscribers</p>
+          <i class="fa-solid fa-copy" onclick="copy()"></i>
+        </code>
+      </li>
+    </ul>
+
+    <h3>Response</h3>
+    <p>response with an array of subscribers (an object)</p>
+    <pre class="code-block">
+    Status Code: 200 OK
+    Content-Type: application/json
+  
+    Body:
+    [
+      {
+        "id": "1",
+        "name": "John Doe",
+        "subscribedChannel": "Channel A"
+      },
+      {
+        "id": "2",
+        "name": "Jane Smith",
+        "subscribedChannel": "Channel B"
+      },
+      // ...
+    ]
+    </pre>
+
+    <h3>Error Responses</h3>
+    <ul>
+      <li><code>500 Internal Server Error</code></li>
+    </ul>
+
+    <h2>Get subscriber names</h2>
+    <h3>Request</h3>
+    <ul>
+      <li>Method: <code>GET</code></li>
+      <li>
+        URL:
+        <code>
+          <p>https://api.example.com/names</p>
+          <i class="fa-solid fa-copy"></i>
+        </code>
+      </li>
+    </ul>
+
+    <h3>Response</h3>
+    <p>response with an array of subscribers (an object) with only two fields "name" and "subscribedChannel"</p>
+    <pre class="code-block">
+    Status Code: 200 OK
+    Content-Type: application/json
+  
+    Body:
+    [
+    {
+        "name": "Jeread Krus",
+        "subscribedChannel": "CNET"
+      },
+      {
+        "name": "John Doe",
+        "subscribedChannel": "freeCodeCamp.org"
+      }
+      // ...
+    ]
+    </pre>
+
+    <h3>Error Responses</h3>
+    <ul>
+      <li><code>500 Internal Server Error</code></li>
+    </ul>
+
+    <h2>Get subscriber by ID</h2>
+    <h3>Request</h3>
+    <ul>
+      <li>Method: <code>GET</code></li>
+      <li>
+        URL:
+        <code>
+          <p>https://api.example.com/:id</p>
+          <i class="fa-solid fa-copy" onclick="copy()"></i>
+        </code>
+        <br>
+        (Replace :id with the actual ID of the subscriber)
+        <h4>Example</h4>
+        <p>https://api.example.com/64aa416e89b96d4afc7f22cc</p>
+      </li>
+    </ul>
+
+    <h3>Response</h3>
+    <p>response with an array of subscribers (an object) with only two fields "name" and "subscribedChannel"</p>
+    <pre class="code-block">
+    Status Code: 200 OK
+    Content-Type: application/json
+  
+    Body:
+    {
+      "id": "64aa416e89b96d4afc7f22cc",
+      "name": "Jeread Krus",
+      "subscribedChannel": "CNET"
+    }
+    </pre>
+
+    <h3>Error Responses</h3>
+    <ul>
+      <li>
+        <code>400 Not Found</code>: This response is returned when no data is
+        found with the given ID.
+      </li>
+      <li><code>500 Internal Server Error</code></li>
+    </ul>
+    <p>If a request or Route is incorrect, response is : </p>
+    <code>404 Not Found</code>
+    <footer>
+        <p>-by Manoj Jayaraman</p>
+    </footer>
+    <script src="./public.js"></script>
+  </body>
+</html>
