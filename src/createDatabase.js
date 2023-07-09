@@ -5,7 +5,7 @@ const data = require('./data')
 require('dotenv').config();
 
 // Connect to DATABASE
-const DATABASE_URL = process.env.DATABASE_URL;
+const DATABASE_URL = process.env.MONGODB_URI;
 mongoose.connect(DATABASE_URL,{ useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection
 db.on('error', (err) => console.log(err))
