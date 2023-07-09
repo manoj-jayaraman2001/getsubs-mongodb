@@ -34,7 +34,7 @@ app.get('/subscribers/:id', async (req, res) => {
         // Use Mongoose model to query the database
         const userId = req.params.id
         const resultByID = await subscribers.findById(userId);
-        
+        // verifying if data with given exists.
         if(resultByID) {
             res.status(200).json(resultByID)
         }else{
@@ -43,8 +43,14 @@ app.get('/subscribers/:id', async (req, res) => {
         
       } catch (err) {
         console.error('Failed to retrieve users:', err);
-        res.status(500).send({message: "Something Went Wrong!! Failed to retrieve data"});
+        res.status(500).json({message: "Something Went Wrong!! Failed to retrieve data"});
       }
 })
+
+//response for incorrect routes
+app.get('*', (req,res)=>{
+    res.status(404).json({error: "404! Not Found"})
+})
+
 
 module.exports = app;
