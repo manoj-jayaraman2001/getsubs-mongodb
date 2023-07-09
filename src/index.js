@@ -1,6 +1,8 @@
 const express = require('express')
 const app = require('./app.js')
 const mongoose = require('mongoose')
+const path = require('path')
+
 
 require('dotenv').config(); // to access .env
 
@@ -11,8 +13,6 @@ const port =  process.env.PORT || 3000
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }));
 
-//presenting static files
-app.use(express.static('public'))
 
 
 
