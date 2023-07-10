@@ -19,7 +19,7 @@
       "MONGODB_URI": "@mongo-uri"
     },
     "static": {
-        "public": "public"
+        "public": "src/public"
     },
     
     "build": {
