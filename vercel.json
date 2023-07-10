@@ -1,9 +1,35 @@
 {
-    "version": 2,
     "builds": [
-      { "src": "src/index.js", "use": "@vercel/node" }
+      {
+        "src": "src/app.js",
+        "use": "@vercel/node"
+      }
     ],
     "routes": [
-      { "src": "/subscibers/(.*)", "dest": "src/app.js" }
-    ]
+      {
+        "src": "/subscribers/(.*)",
+        "dest": "src/app.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "src/app.js"
+      }
+    ],
+    "env": {
+      "MONGODB_URI": "@mongo-uri"
+    },
+    "static": {
+      "public": "public"
+    },
+    "build": {
+      "env": {
+        "BUILD_ENV": "production"
+      },
+      "use": "@vercel/static-build",
+      "config": {
+        "zeroConfig": true
+      },
+      "command": "node src/createDatabase.js && npm run build"
+    }
   }
+  
