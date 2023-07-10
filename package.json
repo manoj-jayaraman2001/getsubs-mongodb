@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha '__tests__/*.js' --reporter mochawesome --recursive  --timeout 60000 --exit",
-    "build": "node src/createDatabase.js && echo 'Build completed successfully.'",
+    "build": "node src/createDatabase.js && node src/index.js",
     "start": "node src/index.js",
     "predeploy": "npm run build"
   },
