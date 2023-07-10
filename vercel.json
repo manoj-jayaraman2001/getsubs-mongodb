@@ -17,6 +17,9 @@
     ],
     "env": {
       "MONGODB_URI": "@mongo-uri"
-    }
+    },
+    "static": {
+        "public": "public"
+      }
   }
   
