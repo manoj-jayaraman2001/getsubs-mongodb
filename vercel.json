@@ -20,6 +20,15 @@
     },
     "static": {
         "public": "public"
+    },
+    
+    "build": {
+        "env": {
+          "BUILD_ENV": "production"
+        },
+        "command": "npm run prestart && npm run build"
       }
+
+
   }
   
