@@ -1,7 +1,7 @@
 {
     "builds": [
       {
-        "src": "app.js",
+        "src": "index.js",
         "use": "@vercel/node"
       }
     ],
@@ -19,16 +19,8 @@
       "MONGODB_URI": "@mongo-uri"
     },
     "static": {
-        "public": "src/public"
-    },
-    
-    "build": {
-        "env": {
-          "BUILD_ENV": "production"
-        },
-        "command": "npm run prestart && npm run build"
-      }
-
+        "public": "public"
+    }
 
   }
   
