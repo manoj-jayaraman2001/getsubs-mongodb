@@ -7,6 +7,10 @@ const path = require('path')
 require('dotenv').config(); // to access .env
 
 
+
+//presenting static files
+app.use(express.static('public'))
+
 const port =  process.env.PORT || 3000
 
 // Parse JSON bodies (as sent by API clients)
