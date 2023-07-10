@@ -25,7 +25,7 @@
       "env": {
         "BUILD_ENV": "production"
       },
-      "use": "@vercel/static-build",
+      "use": "@vercel/node",
       "config": {
         "zeroConfig": true
       },
