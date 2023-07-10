@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha '__tests__/*.js' --reporter mochawesome --recursive  --timeout 60000 --exit",
-    "prestart": "node ./src/createDatabase.js",
-    "start": "node ./src/index.js"
+    "build": "node src/createDatabase.js && echo 'Build completed successfully.'",
+    "start": "node src/index.js",
+    "predeploy": "npm run build"
   },
   "author": "",
   "license": "ISC",
