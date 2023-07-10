@@ -1,20 +1,25 @@
 {
     "builds": [
       {
-        "src": "src/app.js",
+        "src": "app.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
         "src": "/subscribers/(.*)",
-        "dest": "src/app.js"
+        "dest": "app.js"
       },
       {
         "src": "/(.*)",
-        "dest": "src/app.js"
+        "dest": "app.js"
       }
-    ]
-    
+    ],
+    "env": {
+      "MONGODB_URI": "@mongo-uri"
+    },
+    "static": {
+      "public": "public"
+    }
   }
   
