@@ -51,9 +51,9 @@ app.get('/subscribers/:id', async (req, res) => {
 })
 
 //response for incorrect routes
-// app.get('*', (req,res)=>{
-//     res.status(404).json({error: "404! Not Found"})
-// })
+app.get('*', (req,res)=>{
+    res.status(404).json({error: "404! Not Found"})
+})
 
 
 module.exports = app;
