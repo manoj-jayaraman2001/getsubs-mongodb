@@ -81,6 +81,18 @@ footer{
     margin-top: 16px;
     
 }
+#message{
+  position: fixed;
+  background-color: #007f46;
+  color: white;
+  padding: 4px 20px;
+  display: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px black;
+  right: 5%;
+  bottom: 2%;
+
+}
 
 @media(max-width: 724px){
     body{
