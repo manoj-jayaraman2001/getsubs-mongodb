@@ -1,3 +1,8 @@
+
+//presenting static files
+app.use(express.static('public'))
+
+
 const express = require('express')
 const app = require('./app.js')
 const mongoose = require('mongoose')
@@ -7,9 +12,6 @@ const path = require('path')
 require('dotenv').config(); // to access .env
 
 
-
-//presenting static files
-app.use(express.static('public'))
 
 const port =  process.env.PORT || 3000
 
