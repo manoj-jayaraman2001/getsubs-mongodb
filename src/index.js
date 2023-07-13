@@ -1,7 +1,4 @@
 
-//presenting static files
-app.use(express.static('public'))
-
 
 const express = require('express')
 const app = require('./app.js')

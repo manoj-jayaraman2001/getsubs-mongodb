@@ -7,6 +7,10 @@ const subscribers = require('./models/subscribers')
 
 
 
+//presenting static files
+app.use(express.static('public'))
+
+
 app.get('/subscribers', async (req,res) => {
     try {
         // Use Mongoose model to query the database
