@@ -13,8 +13,8 @@ Live URL: [https://getsubs-mongodb.onrender.com/](https://getsubs-mongodb.onrend
 - **Filtered Subscriber Names**: Get an array of subscribers with only their names and channels, allowing for quick reference.
 
 - **Individual Subscriber**: Fetch an individual subscriber object by providing their unique ID.
-- 
-**API Schema Documentation**: Access the API schema documentation as a static file to understand the available endpoints, request/response formats, and any additional details. You can find the documentation file in the repository.
+- **API Schema Documentation**: Access the API schema documentation as a static file to understand the available endpoints, request/response formats, and any 
+  additional details. You can find the documentation file in the repository.
 
 - **Error Handling**: Proper error handling with appropriate status codes (500, 400, and 404) and informative error messages.
 
@@ -37,9 +37,9 @@ npm install
    
 5. Start the server:
 
-   ```shell
-   npm start
-   ```
+```shell
+npm start
+```
 
 6. Access the application at http://localhost:3000
 
