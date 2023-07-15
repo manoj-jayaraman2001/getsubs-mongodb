@@ -2,7 +2,7 @@
 
 ## Description
 
-GetSubs is a subscription management web application built with Node.js, Express, and MongoDB. It provides a user-friendly interface for tracking and managing subscriptions, ensuring you stay organized and in control of your financial commitments.
+API built with Node.js, Express, and MongoDB. It provides a user-friendly API docs
 
 Live URL: [https://getsubs-mongodb.onrender.com/](https://getsubs-mongodb.onrender.com/)
 
